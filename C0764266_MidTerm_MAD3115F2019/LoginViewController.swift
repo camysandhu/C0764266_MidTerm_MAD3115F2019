@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showVersion()
+        
         
         let getdata = Singleton.getInstance()
         getdata.createCust()
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {action
                 in
-                print("Cancle clicked")
+                print("Cancel clicked")
             }))
             self.present(alert, animated: true)
             print("invalid username or password")
@@ -93,12 +93,7 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    func showVersion()
-    {
-        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString"), let versionCode = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion")  {
-            
-            lblVersion.text = "Version \(version) (\(versionCode))"
-        }
+    
         
     
     
@@ -107,4 +102,4 @@ class LoginViewController: UIViewController {
     
 
 
-}
+
