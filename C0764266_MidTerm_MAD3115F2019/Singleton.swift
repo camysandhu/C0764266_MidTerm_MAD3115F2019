@@ -26,4 +26,17 @@ class Singleton: NSObject
         let temp = Customer(customerID: c, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
         self.AddCustomer(customer: temp)
     }
+    
+    func returnCustomerObject(custID : Int) -> Customer?
+    {
+        for (k,v) in customerDictionary
+        {
+            if custID == k
+            {
+                return v
+            }
+        }
+        return nil
+        
+    }
 }
