@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
     }
     
     
+    
     @IBAction func btnLogin(_ sender: UIButton) {
         
         if readInfoPlist()
@@ -79,33 +80,32 @@ class LoginViewController: UIViewController {
     
     
     
-    func readInfoPlist() -> Bool{
-        if let bundlePath = Bundle.main.path(forResource: "Users", ofType: "plist") {
-            let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-            let usersList = dictionary!["Users"] as! NSArray
-            
-            for u in usersList
-            {
-                let user = u as! NSDictionary
-                let uname = user["username"]! as! String
-                let pwd = user["password"]! as! String
-                if uname==txtUser.text! && pwd==txtPassword.text!
-                {
-                    return true
-                }
-            }
-            
-            
-        }
-        return false
-    }
+     func readInfoPlist() -> Bool{
+         if let bundlePath = Bundle.main.path(forResource: "Users", ofType: "plist") {
+             let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+              let usersList = dictionary!["Users"] as! NSArray
+          
+              for u in usersList
+              {
+                   let user = u as! NSDictionary
+                  let uname = user["username"]! as! String
+                  let pwd = user["password"]! as! String
+                  if uname==txtUser.text! && pwd==txtPassword.text!
+                  {
+                      return true
+                  }
+              }
+          
+         
+             }
+              return false
+         }
+         
+      
     
-    
-        
-    
-    
-        
-    }
+
+      }
+
     
 
 

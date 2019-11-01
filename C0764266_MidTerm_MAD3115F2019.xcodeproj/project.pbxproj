@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33D0ABB0236CBDB800247781 /* AddCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0ABA9236CBDB800247781 /* AddCustomerViewController.swift */; };
+		33D0ABB1236CBDB800247781 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0ABAA236CBDB800247781 /* Customer.swift */; };
+		33D0ABB2236CBDB800247781 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0ABAB236CBDB800247781 /* LoginViewController.swift */; };
+		33D0ABB3236CBDB800247781 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0ABAC236CBDB800247781 /* Singleton.swift */; };
+		33D0ABB4236CBDB800247781 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 33D0ABAD236CBDB800247781 /* Images */; };
+		33D0ABB5236CBDB800247781 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33D0ABAE236CBDB800247781 /* Users.plist */; };
+		33D0ABB6236CBDB800247781 /* CustomerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0ABAF236CBDB800247781 /* CustomerListViewController.swift */; };
 		9B499A24236C95970007E499 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B499A23236C95970007E499 /* AppDelegate.swift */; };
-		9B499A26236C95970007E499 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B499A25236C95970007E499 /* ViewController.swift */; };
 		9B499A29236C95970007E499 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B499A27236C95970007E499 /* Main.storyboard */; };
 		9B499A2B236C95970007E499 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B499A2A236C95970007E499 /* Assets.xcassets */; };
 		9B499A2E236C95970007E499 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B499A2C236C95970007E499 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33D0ABA9236CBDB800247781 /* AddCustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCustomerViewController.swift; sourceTree = "<group>"; };
+		33D0ABAA236CBDB800247781 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		33D0ABAB236CBDB800247781 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		33D0ABAC236CBDB800247781 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		33D0ABAD236CBDB800247781 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		33D0ABAE236CBDB800247781 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
+		33D0ABAF236CBDB800247781 /* CustomerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerListViewController.swift; sourceTree = "<group>"; };
 		9B499A20236C95970007E499 /* C0764266_MidTerm_MAD3115F2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0764266_MidTerm_MAD3115F2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B499A23236C95970007E499 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B499A25236C95970007E499 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B499A28236C95970007E499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B499A2A236C95970007E499 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B499A2D236C95970007E499 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,10 +67,16 @@
 			isa = PBXGroup;
 			children = (
 				9B499A23236C95970007E499 /* AppDelegate.swift */,
-				9B499A25236C95970007E499 /* ViewController.swift */,
 				9B499A27236C95970007E499 /* Main.storyboard */,
 				9B499A2A236C95970007E499 /* Assets.xcassets */,
 				9B499A2C236C95970007E499 /* LaunchScreen.storyboard */,
+				33D0ABA9236CBDB800247781 /* AddCustomerViewController.swift */,
+				33D0ABAA236CBDB800247781 /* Customer.swift */,
+				33D0ABAF236CBDB800247781 /* CustomerListViewController.swift */,
+				33D0ABAD236CBDB800247781 /* Images */,
+				33D0ABAB236CBDB800247781 /* LoginViewController.swift */,
+				33D0ABAC236CBDB800247781 /* Singleton.swift */,
+				33D0ABAE236CBDB800247781 /* Users.plist */,
 				9B499A2F236C95970007E499 /* Info.plist */,
 			);
 			path = C0764266_MidTerm_MAD3115F2019;
@@ -122,7 +140,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D0ABB4236CBDB800247781 /* Images in Resources */,
 				9B499A2E236C95970007E499 /* LaunchScreen.storyboard in Resources */,
+				33D0ABB5236CBDB800247781 /* Users.plist in Resources */,
 				9B499A2B236C95970007E499 /* Assets.xcassets in Resources */,
 				9B499A29236C95970007E499 /* Main.storyboard in Resources */,
 			);
@@ -135,7 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B499A26236C95970007E499 /* ViewController.swift in Sources */,
+				33D0ABB2236CBDB800247781 /* LoginViewController.swift in Sources */,
+				33D0ABB1236CBDB800247781 /* Customer.swift in Sources */,
+				33D0ABB0236CBDB800247781 /* AddCustomerViewController.swift in Sources */,
+				33D0ABB3236CBDB800247781 /* Singleton.swift in Sources */,
+				33D0ABB6236CBDB800247781 /* CustomerListViewController.swift in Sources */,
 				9B499A24236C95970007E499 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
