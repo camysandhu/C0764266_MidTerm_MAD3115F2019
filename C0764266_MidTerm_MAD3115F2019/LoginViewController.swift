@@ -57,7 +57,47 @@ class LoginViewController: UIViewController {
             //                let uname=txtUser.text!
             //                print("Hello \(uname)")
         }
+        else{
+            let alert = UIAlertController(title: "Wrong Username Or Password", message: "change username or password", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {action
+                in
+                print("Cancle clicked")
+            }))
+            self.present(alert, animated: true)
+            print("invalid username or password")
+        }
         
-}
+    }
+    
+    
+    
+    func readInformationPlist() -> Bool{
+        if let bundlePath = Bundle.main.path(forResource: "Users", ofType: "plist") {
+            let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+            let usersList = dictionary!["Users"] as! NSArray
+            
+            for u in usersList
+            {
+                let user = u as! NSDictionary
+                let uname = user["username"]! as! String
+                let pwd = user["password"]! as! String
+                if uname==txtUser.text! && pwd==txtPassword.text!
+                {
+                    return true
+                }
+            }
+            
+            
+        }
+        return false
+    }
+    
+    
+        
+    }
+    
+
 
 
