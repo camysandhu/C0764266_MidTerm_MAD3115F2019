@@ -11,12 +11,19 @@ import UIKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtUser: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
-    @IBOutlet weak var lblVersion: UILabel!
-    @IBOutlet weak var btnLogin: UIButton!
-    var uDefault : UserDefaults!
-    @IBOutlet weak var btnRememberMe: UISwitch!
     
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    @IBOutlet weak var btnLogin: UIBarButtonItem!
+    //@IBOutlet weak var txtUser: UITextField!
+   // @IBOutlet weak var txtPassword: UITextField!
+   // @IBOutlet weak var lblVersion: UILabel!
+   // @IBOutlet weak var btnLogin: UIButton!
+    var uDefault : UserDefaults!
+    //@IBOutlet weak var btnRememberMe: UISwitch!
+    
+//    @IBOutlet weak var btnRememberMe: UILabel!
+    @IBOutlet weak var btnRememberMe: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +64,7 @@ class LoginViewController: UIViewController {
         
         }
         else{
-            let alert = UIAlertController(title: "Wrong Username Or Password", message: "change username or password", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Invalid Username Or Password", message: "change username or password", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {action
