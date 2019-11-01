@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLogin(_ sender: UIButton) {
         
-        if readInformationPlist()
+        if readInfoPlist()
         {
             if self.btnRememberMe.isOn{
                 self.uDefault.set(txtUser.text, forKey: "userName")
@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
     
     
     
-    func readInformationPlist() -> Bool{
+    func readInfoPlist() -> Bool{
         if let bundlePath = Bundle.main.path(forResource: "Users", ofType: "plist") {
             let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
             let usersList = dictionary!["Users"] as! NSArray
