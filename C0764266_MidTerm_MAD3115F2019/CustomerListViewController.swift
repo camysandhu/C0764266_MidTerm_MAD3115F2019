@@ -16,6 +16,15 @@ class CustomerListViewController: UIViewController
         
         navigationItem.leftBarButtonItem=btnLogout
     }
+    
+    @objc
+    func logout(sender: UIBarButtonItem)
+    {
+        print("logout")
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
