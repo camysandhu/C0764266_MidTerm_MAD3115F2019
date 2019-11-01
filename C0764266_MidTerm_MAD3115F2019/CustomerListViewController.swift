@@ -26,7 +26,7 @@ class CustomerListViewController: UIViewController, UITableViewDelegate, UITable
     
     private func addCustomerButton()
     {
-        let btnLogout=UIBarButtonItem(title: "ADD", style: .done, target: self, action: #selector(CustomerListViewController.addCustomer(sender:)))
+        let btnLogout=UIBarButtonItem(title: "New Customer", style: .done, target: self, action: #selector(CustomerListViewController.addCustomer(sender:)))
         
         navigationItem.rightBarButtonItem=btnLogout
     }
