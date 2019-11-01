@@ -7,9 +7,9 @@
 //
 
 import Foundation
-class Singleton: NSObject, IDisplay
+class Singleton: NSObject
 {
-    func printData()
+    func printdata()
     {
         for i in customerDictionary.values
             {
