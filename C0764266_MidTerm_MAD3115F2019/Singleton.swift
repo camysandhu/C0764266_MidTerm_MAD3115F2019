@@ -7,8 +7,17 @@
 //
 
 import Foundation
-class Singleton: NSObject
+class Singleton: NSObject, IDisplay
 {
+    func printData()
+    {
+        for i in customerDictionary.values
+            {
+                print(i.customerFName!)
+            }
+        
+    }
+    
     private var customerDictionary  = [Int:Customer]()
     
     private static var obj = Singleton()
@@ -26,6 +35,8 @@ class Singleton: NSObject
         let temp = Customer(customerID: c, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
         self.addingCustomer(customer: temp)
     }
+    
+    
     
     func addingCustomer(customer: Customer)
     {
