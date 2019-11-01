@@ -18,4 +18,12 @@ class Singleton: NSObject
     {
         return obj
     }
+    
+    func addNewCustomer(First_Name : String, Last_Name : String, email : String)
+    {
+        let c = customerDictionary.count + 1
+        
+        let temp = Customer(customerID: c, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
+        self.AddCustomer(customer: temp)
+    }
 }
