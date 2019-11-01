@@ -12,4 +12,10 @@ class Singleton: NSObject
     private var customerDictionary  = [Int:Customer]()
     
     private static var obj = Singleton()
+    
+    
+    internal static func getInstance() -> Singleton
+    {
+        return obj
+    }
 }
