@@ -8,12 +8,18 @@
 
 import UIKit
 
-class CustomerListViewController: UIViewController {
-
+class CustomerListViewController: UIViewController
+{
+    private func addLogoutButton()
+    {
+        let btnLogout=UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(CustomerListViewController.logout(sender:)))
+        
+        navigationItem.leftBarButtonItem=btnLogout
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
