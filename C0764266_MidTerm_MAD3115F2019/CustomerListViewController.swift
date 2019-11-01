@@ -24,6 +24,23 @@ class CustomerListViewController: UIViewController
         navigationController?.popViewController(animated: true)
     }
     
+    private func addCustomerButton()
+    {
+        let btnLogout=UIBarButtonItem(title: "ADD", style: .done, target: self, action: #selector(CustomerListViewController.addCustomer(sender:)))
+        
+        navigationItem.rightBarButtonItem=btnLogout
+    }
+    
+    @objc
+    func addCustomer(sender: UIBarButtonItem)
+    {
+        print("Customer Added")
+        let sb1=UIStoryboard(name: "Main", bundle: nil)
+        let addCustomerVC=sb1.instantiateViewController(identifier: "addCustomerVC") as! AddCustomerViewController
+        navigationController?.pushViewController(addCustomerVC, animated: true)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
