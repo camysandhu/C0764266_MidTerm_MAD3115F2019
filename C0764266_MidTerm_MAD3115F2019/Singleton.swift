@@ -39,4 +39,9 @@ class Singleton: NSObject
         return nil
         
     }
+    
+    func returnCount() -> Int
+    {
+        return customerDictionary.count
+    }
 }
