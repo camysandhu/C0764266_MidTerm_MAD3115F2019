@@ -94,10 +94,18 @@ class LoginViewController: UIViewController {
         return false
     }
     
+    func showVersion()
+    {
+        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString"), let versionCode = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion")  {
+            
+            lblVersion.text = "Version \(version) (\(versionCode))"
+        }
+        
+    
     
         
     }
     
 
 
-
+}
