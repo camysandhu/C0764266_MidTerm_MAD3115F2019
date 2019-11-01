@@ -28,7 +28,7 @@ class AddCustomerViewController: UIViewController {
     {
         print("Customer Added")
         let sb1=UIStoryboard(name: "Main", bundle: nil)
-        let customerListVC=sb1.instantiateViewController(identifier: "customerListVC") as! CustomerListViewController
+        let customerListVC=sb1.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListViewController
         navigationController?.pushViewController(customerListVC, animated: true)
         
         
@@ -62,9 +62,17 @@ class AddCustomerViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        saveCustomerButton()
         
     }
+//    https://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift
+    func isValidEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: txtEmail.text!)
+    }
+    
     
     
     
