@@ -56,6 +56,19 @@ class Singleton: NSObject, IDisplay
         
     }
     
+    func createCust()
+    {
+        let c1 = Customer(customerID: 1, customerFName: "Camy", customerLName: "Sandhu", customerEmail: "fmscamy@gmail.com ")
+        addingCustomer(customer: c1)
+        let c2 = Customer(customerID: 2, customerFName: "Charan", customerLName: "kaur", customerEmail: "ckaur@gmail.com ")
+        addingCustomer(customer: c2)
+        let c3 = Customer(customerID: 3, customerFName: "Komal", customerLName: "Kaur", customerEmail: "kkaur321@gmail.com ")
+        addingCustomer(customer: c3)
+        let c4 = Customer(customerID: 4, customerFName: "Harchandbir", customerLName: "Singh", customerEmail: "hc@gmail.com ")
+        addingCustomer(customer: c4)
+        
+    }
+    
     func returnCount() -> Int
     {
         return customerDictionary.count
