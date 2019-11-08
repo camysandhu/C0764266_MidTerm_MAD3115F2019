@@ -41,21 +41,21 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
        if currentBill?.billType == billTypes.Mobile{
            cell.textLabel?.numberOfLines = 12
            let mobileBill = currentBill as! Mobile
-         detail = "\nBill Type : Mobile \nManufacturer Name : \(mobileBill.mobileManufacturerName) \nPlan Name : \(mobileBill.planName) \nMobile Number : \(mobileBill.mobileNumber) \nInternet used : \(mobileBill.internetGbUsed) \nMinutes Used : \(mobileBill.minuteUsed) "
+        detail = "\nBill Type : Mobile \nManufacturer Name : \(mobileBill.mobileManufacturerName) \nPlan Name : \(mobileBill.planName) \nMobile Number : \(mobileBill.mobileNumber) \nInternet used : \(mobileBill.internetGbUsed.data()) \nMinutes Used : \(mobileBill.minuteUsed.minutes()) "
        } else {
            if currentBill?.billType == billTypes.Hydro{
                cell.textLabel?.numberOfLines = 12
                let hydroBill = currentBill as! Hydro
-               detail = "\nBill Type : Hydro \nAgency Name : \(hydroBill.agencyName) \nUnit Consumed : \(hydroBill.unitConsumed)"
+            detail = "\nBill Type : Hydro \nAgency Name : \(hydroBill.agencyName) \nUnit Consumed : \(hydroBill.unitConsumed.unit())"
            } else {
                if currentBill?.billType == billTypes.Internet{
                    cell.textLabel?.numberOfLines = 12
                    let internetBill = currentBill as! Internet
-                detail = "\nBill Type : Internet \nProvider Name : \(internetBill.providerName) \nInternet Used : \(internetBill.internetGbUsed)"
+                detail = "\nBill Type : Internet \nProvider Name : \(internetBill.providerName) \nInternet Used : \(internetBill.internetGbUsed.data())"
                }
            }
        }
-    cell.textLabel?.text = "Bill ID : \(String(describing: currentBill!.billId)) \nBill Date : \(String(describing: currentBill!.billDate)) \nBill Total : \(String(describing: currentBill!.totalBillAmount)) \(detail)"
+    cell.textLabel?.text = "Bill ID : \(String(describing: currentBill!.billId)) \nBill Date : \(String(describing: currentBill!.billDate.formattedDate())) \nBill Total : \(String(describing: currentBill!.totalBillAmount.currencyFormatter())) \(detail)"
        return cell
    }
 
