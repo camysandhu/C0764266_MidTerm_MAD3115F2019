@@ -246,6 +246,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="pp5-3a-coY"/>
                     </view>
+                    <connections>
+                        <outlet property="segmentBill" destination="T8W-57-pcm" id="yRI-UB-CGq"/>
+                        <outlet property="txtBillAmount" destination="6WP-RW-loy" id="ZZz-pQ-Klt"/>
+                        <outlet property="txtBillDate" destination="wxM-ri-lUG" id="djW-bz-FId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yo1-m0-wP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

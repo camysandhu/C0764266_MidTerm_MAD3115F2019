@@ -10,6 +10,9 @@ import UIKit
 
 class AddBillViewController: UIViewController {
 
+    @IBOutlet weak var txtBillDate: UITextField!
+    @IBOutlet weak var txtBillAmount: UITextField!
+    @IBOutlet weak var segmentBill: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
