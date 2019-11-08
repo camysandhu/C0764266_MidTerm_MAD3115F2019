@@ -15,14 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     
     @IBOutlet weak var btnLogin: UIBarButtonItem!
-    //@IBOutlet weak var txtUser: UITextField!
-   // @IBOutlet weak var txtPassword: UITextField!
-   // @IBOutlet weak var lblVersion: UILabel!
-   // @IBOutlet weak var btnLogin: UIButton!
+   
     var uDefault : UserDefaults!
-    //@IBOutlet weak var btnRememberMe: UISwitch!
-    
-//    @IBOutlet weak var btnRememberMe: UILabel!
+
     @IBOutlet weak var btnRememberMe: UISwitch!
     
     override func viewDidLoad() {
