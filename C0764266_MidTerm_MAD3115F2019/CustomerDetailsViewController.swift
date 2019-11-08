@@ -35,7 +35,7 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "billCell")!
+       let cell = tableView.dequeueReusableCell(withIdentifier: "billingCell")!
        let currentBill = custDetails!.billDictionary[indexPath.row + 1]
    var detail = ""
        if currentBill?.billType == billTypes.Mobile{
