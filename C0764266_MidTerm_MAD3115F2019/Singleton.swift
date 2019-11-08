@@ -7,74 +7,74 @@
 //
 
 import Foundation
-//class Singleton: NSObject
-//{
-//    func printdata()
-//    {
-//        for i in customerDictionary.values
-//            {
-//                print(i.customerFName!)
-//            }
-//
-//    }
-//
-//    private var customerDictionary  = [Int:Customer]()
+class Singleton: NSObject
+{
+    func printdata()
+    {
+        for i in customerDictionary.values
+            {
+                print(i.customerFName!)
+            }
+
+    }
+
+    private var customerDictionary  = [Int:Customer]()
 //    private var billDictionary  = [Int:Bill]()
-//
-//
-//
-//    private static var obj = Singleton()
-//
-//
-//    internal static func getInstance() -> Singleton
-//    {
-//        return obj
-//    }
-//
-//    func addNewCustomer(First_Name : String, Last_Name : String, email : String)
-//    {
-//        let c = customerDictionary.count + 1
-//
-//        let temp = Customer(customerID: c, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
-//        self.addingCustomer(customer: temp)
-//    }
-//
-//
-//
-//    func addingCustomer(customer: Customer)
-//    {
-//        customerDictionary.updateValue(customer, forKey: customer.customerID!)
-//    }
-//
-//    func returnCustomerObject(custID : Int) -> Customer?
-//    {
-//        for (k,v) in customerDictionary
-//        {
-//            if custID == k
-//            {
-//                return v
-//            }
-//        }
-//        return nil
-//
-//    }
-//
-//    func createCust()
-//    {
-//        let c1 = Customer(customerID: 1, customerFName: "Camy", customerLName: "Sandhu", customerEmail: "fmscamy@gmail.com ")
-//        addingCustomer(customer: c1)
-//        let c2 = Customer(customerID: 2, customerFName: "Charan", customerLName: "kaur", customerEmail: "ckaur@gmail.com ")
-//        addingCustomer(customer: c2)
-//        let c3 = Customer(customerID: 3, customerFName: "Komal", customerLName: "Kaur", customerEmail: "kkaur321@gmail.com ")
-//        addingCustomer(customer: c3)
-//        let c4 = Customer(customerID: 4, customerFName: "Harchandbir", customerLName: "Singh", customerEmail: "hc@gmail.com ")
-//        addingCustomer(customer: c4)
-//
-//        var valDictionary = ["COSTMERBILL" : Customer(customerID: 1, customerFName: "Camy", customerLName: "Sandhu", customerEmail: "fmscamy@gmail.com ")]
-//
-//        print (valDictionary["COSTMERBILL"])
-//
-//    }
+
+
+
+    private static var obj = Singleton()
+
+
+    internal static func getInstance() -> Singleton
+    {
+        return obj
+    }
+
+    func addNewCustomer(First_Name : String, Last_Name : String, email : String)
+    {
+        let c = customerDictionary.count + 1
+
+        let temp = Customer(customerID: c, customerFName: First_Name, customerLName: Last_Name, customerEmail: email)
+        self.addingCustomer(customer: temp)
+    }
+
+
+
+    func addingCustomer(customer: Customer)
+    {
+        customerDictionary.updateValue(customer, forKey: customer.customerID!)
+    }
+
+    func returnCustomerObject(custID : Int) -> Customer?
+    {
+        for (k,v) in customerDictionary
+        {
+            if custID == k
+            {
+                return v
+            }
+        }
+        return nil
+
+    }
+
+    func createCust()
+    {
+        let c1 = Customer(customerID: 1, customerFName: "Camy", customerLName: "Sandhu", customerEmail: "fmscamy@gmail.com ")
+        addingCustomer(customer: c1)
+        let c2 = Customer(customerID: 2, customerFName: "Charan", customerLName: "kaur", customerEmail: "ckaur@gmail.com ")
+        addingCustomer(customer: c2)
+        let c3 = Customer(customerID: 3, customerFName: "Komal", customerLName: "Kaur", customerEmail: "kkaur321@gmail.com ")
+        addingCustomer(customer: c3)
+        let c4 = Customer(customerID: 4, customerFName: "Harchandbir", customerLName: "Singh", customerEmail: "hc@gmail.com ")
+        addingCustomer(customer: c4)
+
+        var valDictionary = ["COSTMERBILL" : Customer(customerID: 1, customerFName: "Camy", customerLName: "Sandhu", customerEmail: "fmscamy@gmail.com ")]
+
+       
+
+    }
 //    func addBillToCustomer()
 //    {
 //        let b1 = Mobile(billId: 1, billDate: Date(), billType: billTypes.Mobile, totalBillAmount: 42.5, mobileManufacturerName: "Apple", planName: "BigData", mobileNumber: 647123432, internetGbUsed: 23, minuteUsed: 12)
@@ -98,12 +98,10 @@ import Foundation
 //
 //
 //    }
-//
-//    func returnCount() -> Int
-//    {
-//        return customerDictionary.count
-//    }
-//}
 
+    func returnCount() -> Int
+    {
+        return customerDictionary.count
+    }
+}
 
-``
