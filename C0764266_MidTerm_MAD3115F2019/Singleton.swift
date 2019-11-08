@@ -91,6 +91,8 @@ class Singleton: NSObject
         addingCustomer(customer: c2)
         c2.addBillToCustomers(bill: b3)
         c2.addBillToCustomers(bill: b1)
+        c2.addBillToCustomers(bill: b5)
+
         let c3 = Customer(customerID: 3, customerFName: "Komal", customerLName: "Kaur", customerEmail: "kkaur321@gmail.com ")
         addingCustomer(customer: c3)
         c3.addBillToCustomers(bill: b4)

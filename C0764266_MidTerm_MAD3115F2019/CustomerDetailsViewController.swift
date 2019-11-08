@@ -21,6 +21,8 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
               self.billTable.dataSource=self
         let rButton = UIBarButtonItem(title: "Add Bill", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.toAddBill))
         self.navigationItem.rightBarButtonItem = rButton
+        self.addBill()
+        
     }
     
     
@@ -33,6 +35,23 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return ((custDetails?.billDictionary.count)!)
    }
+    
+    private func addBill()
+    {
+        let btnLogout=UIBarButtonItem(title: "New Bill", style: .done, target: self, action: #selector(CustomerDetailsViewController.addCustomer(sender:)))
+        
+        navigationItem.rightBarButtonItem=btnLogout
+    }
+    
+    @objc
+    func addCustomer(sender: UIBarButtonItem)
+    {
+        print("Bill Addded")
+        let sb1=UIStoryboard(name: "Main", bundle: nil)
+        let addBillsVC = sb1.instantiateViewController(withIdentifier: "addBillVC") as! AddBillViewController
+        navigationController?.pushViewController(addBillsVC, animated: true)
+        
+    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "billingCell")!
