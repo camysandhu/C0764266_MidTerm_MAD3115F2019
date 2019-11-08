@@ -185,6 +185,7 @@
                         <viewLayoutGuide key="safeArea" id="6OO-kn-AZC"/>
                     </view>
                     <connections>
+                        <outlet property="billTable" destination="KyB-J0-mPG" id="gpN-gu-JOL"/>
                         <outlet property="lblOne" destination="Ie9-jG-ZUM" id="ONg-MS-7gc"/>
                         <outlet property="lblTwo" destination="NHe-wk-6m0" id="xRM-1h-XIi"/>
                     </connections>

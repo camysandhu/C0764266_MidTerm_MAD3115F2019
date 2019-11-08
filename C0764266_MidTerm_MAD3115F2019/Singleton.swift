@@ -95,9 +95,14 @@ class Singleton: NSObject
         let b5 = Hydro(billId: 1, billDate: Date(), billType: billTypes.Hydro, totalBillAmount: 122.8, agencyName: "Brampton Energy", unitConsumed: 56)
         
         
-        var b6 = Hydro(billId: 2, billDate: Date(), billType: billTypes.Hydro, totalBillAmount: 145.4, agencyName: "Toronto Lines", unitConsumed: 76)
+        let b6 = Hydro(billId: 2, billDate: Date(), billType: billTypes.Hydro, totalBillAmount: 145.4, agencyName: "Toronto Lines", unitConsumed: 76)
         
-        
+        c1.addBillToCustomers(bill: b1)
+        c1.addBillToCustomers(bill: b2)
+        c1.addBillToCustomers(bill: b3)
+        c2.addBillToCustomers(bill: b4)
+        c3.addBillToCustomers(bill: b5)
+        c2.addBillToCustomers(bill: b6)
 
     }
 

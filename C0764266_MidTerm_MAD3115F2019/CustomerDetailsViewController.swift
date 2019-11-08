@@ -12,6 +12,7 @@ class CustomerDetailsViewController: UIViewController {
     var custDetails:Customer?=nil
     @IBOutlet weak var lblOne: UILabel!
     @IBOutlet weak var lblTwo: UILabel!
+    @IBOutlet weak var billTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         lblOne.text = custDetails?.customerEmail
