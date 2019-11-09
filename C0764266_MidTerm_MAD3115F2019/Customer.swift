@@ -9,6 +9,7 @@
 import Foundation
 class Customer
 {
+    
     var customerID : Int?
     var customerFName: String?
     var customerLName : String?
@@ -19,7 +20,7 @@ class Customer
     var customerEmail: String?
     var totalBillAmount : Float?
     var billDictionary = [Int:Bill]()
-    
+static var activeCustomer = Customer()
     var totalAmountToPay: Double
     {
         var totalAmount = 0.0
@@ -35,7 +36,13 @@ class Customer
         billDictionary.updateValue(bill, forKey: bill.billId)
     }
   
-    
+    init()
+        {
+        self.customerID = Int()
+        self.customerFName = String()
+        self.customerLName = String()
+        self.customerEmail = String()
+    }
     init(customerID:Int,customerFName: String,customerLName:String,customerEmail:String)
         {
         self.customerID = customerID

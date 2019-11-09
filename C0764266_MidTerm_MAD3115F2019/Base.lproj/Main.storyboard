@@ -241,6 +241,9 @@
                                     <segment title="Internet"/>
                                     <segment title="Hydro"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentBillType:" destination="QUy-0C-wRh" eventType="valueChanged" id="x6p-lb-QU5"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

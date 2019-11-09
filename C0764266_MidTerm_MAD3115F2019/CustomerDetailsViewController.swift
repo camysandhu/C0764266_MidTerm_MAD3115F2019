@@ -17,8 +17,8 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         super.viewDidLoad()
         lblOne.text = custDetails?.customerEmail
         lblTwo.text = custDetails?.fullName
-       self.billTable.delegate=self
-              self.billTable.dataSource=self
+        self.billTable.delegate=self
+        self.billTable.dataSource=self
         let rButton = UIBarButtonItem(title: "Add Bill", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.toAddBill))
         self.navigationItem.rightBarButtonItem = rButton
         self.addBill()
