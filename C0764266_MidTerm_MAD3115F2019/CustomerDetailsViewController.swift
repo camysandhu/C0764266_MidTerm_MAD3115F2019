@@ -17,7 +17,7 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
     @IBOutlet weak var billTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblCustomerID.text = custDetails?.customerID.
+        lblCustomerID.text = custDetails?.customerID?.typeCastString()
         lblOne.text = custDetails?.customerEmail
         lblTwo.text = custDetails?.fullName
         lblTotalAmount.text = custDetails?.totalAmountToPay?.currencyFormatter()
