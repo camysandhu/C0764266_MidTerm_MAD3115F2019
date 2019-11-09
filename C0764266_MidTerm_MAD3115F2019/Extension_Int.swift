@@ -23,5 +23,9 @@ extension Int
 {
     return String.init(format: "%d minutes", self)
     }
+    func typeCastString() -> String
+    {
+        return String(self)
+    }
     
 }
