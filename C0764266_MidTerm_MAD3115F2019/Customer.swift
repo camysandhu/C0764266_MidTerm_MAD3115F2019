@@ -21,7 +21,7 @@ class Customer
     var totalBillAmount : Float?
     var billDictionary = [Int:Bill]()
 static var activeCustomer = Customer()
-    var totalAmountToPay: Double
+    var totalAmountToPay: Double?
     {
         var totalAmount = 0.0
         for bill in billDictionary

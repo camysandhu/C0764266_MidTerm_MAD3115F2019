@@ -10,13 +10,17 @@ import UIKit
 
 class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var custDetails:Customer?=nil
+    @IBOutlet weak var lblTotalAmount: UILabel!
+    @IBOutlet weak var lblCustomerID: UILabel!
     @IBOutlet weak var lblOne: UILabel!
     @IBOutlet weak var lblTwo: UILabel!
     @IBOutlet weak var billTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblCustomerID.text = custDetails?.customerID.
         lblOne.text = custDetails?.customerEmail
         lblTwo.text = custDetails?.fullName
+        lblTotalAmount.text = custDetails?.totalAmountToPay?.currencyFormatter()
         self.billTable.delegate=self
         self.billTable.dataSource=self
         let rButton = UIBarButtonItem(title: "Add Bill", style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.toAddBill))
