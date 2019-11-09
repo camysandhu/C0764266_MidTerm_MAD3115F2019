@@ -9,6 +9,7 @@
 import Foundation
 class Singleton: NSObject
 {
+//    var customerArray = Array<Customer>()
     func printdata()
     {
         
@@ -84,7 +85,7 @@ class Singleton: NSObject
         
         let c1 = Customer(customerID: 1, customerFName: "Camy", customerLName: "Sandhu", customerEmail: "fmscamy@gmail.com ")
         addingCustomer(customer: c1)
-        c1.addBillToCustomers(bill: b1)
+        c1.addBillToCustomers[(bill: b1)]
         c1.addBillToCustomers(bill: b6)
         
         let c2 = Customer(customerID: 2, customerFName: "Charan", customerLName: "kaur", customerEmail: "ckaur@gmail.com ")
@@ -98,12 +99,11 @@ class Singleton: NSObject
         c3.addBillToCustomers(bill: b4)
         c3.addBillToCustomers(bill: b1)
         c3.addBillToCustomers(bill: b6)
+        
         let c4 = Customer(customerID: 4, customerFName: "Harchandbir", customerLName: "Singh", customerEmail: "hc@gmail.com ")
         addingCustomer(customer: c4)
-        
-        
-       c4.addBillToCustomers(bill: b1)
-              c4.addBillToCustomers(bill: b2)
+        c4.addBillToCustomers(bill: b1)
+        c4.addBillToCustomers(bill: b2)
         
 //        
 //        c1.addBillToCustomers(bill: b2)

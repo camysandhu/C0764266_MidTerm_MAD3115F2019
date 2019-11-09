@@ -29,6 +29,14 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        billTable.reloadData()      // reload at this point
+
+    }
+    
+    
+    
     
     let addBillBtn = UIBarButtonItem()
       
@@ -39,6 +47,8 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return ((custDetails?.billDictionary.count)!)
    }
+    
+
     
     private func addBill()
     {
@@ -53,7 +63,10 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
         print("Bill Addded")
         let sb1=UIStoryboard(name: "Main", bundle: nil)
         let addBillsVC = sb1.instantiateViewController(withIdentifier: "addBillVC") as! AddBillViewController
+        addBillsVC.tempcust = custDetails!
+    
         navigationController?.pushViewController(addBillsVC, animated: true)
+    
         
     }
    
@@ -78,8 +91,10 @@ class CustomerDetailsViewController: UIViewController,UITableViewDelegate,UITabl
                }
            }
        }
+    
     cell.textLabel?.text = "Bill ID : \(String(describing: currentBill!.billId)) \nBill Date : \(String(describing: currentBill!.billDate.formattedDate())) \nBill Total : \(String(describing: currentBill!.totalBillAmount.currencyFormatter())) \(detail)"
        return cell
+    
    }
 
 

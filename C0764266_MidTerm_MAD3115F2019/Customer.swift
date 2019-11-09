@@ -43,6 +43,12 @@ static var activeCustomer = Customer()
         self.customerLName = String()
         self.customerEmail = String()
     }
+    
+    func addbill (billId: Int, billDate: Date, billType: billTypes, totalBillAmount: Double)
+    {
+        let temp = Bill(billId: billId, billDate: billDate, billType: billType, totalBillAmount: totalBillAmount)
+        addBillToCustomers(bill: temp)
+    }
     init(customerID:Int,customerFName: String,customerLName:String,customerEmail:String)
         {
         self.customerID = customerID

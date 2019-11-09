@@ -10,6 +10,7 @@ import UIKit
 
 class AddBillViewController: UIViewController {
 
+    var tempcust : Customer?
     @IBOutlet weak var txtBillDate: UITextField!
     @IBOutlet weak var txtBillAmount: UITextField!
     @IBOutlet weak var segmentBill: UISegmentedControl!
@@ -52,11 +53,19 @@ class AddBillViewController: UIViewController {
     
     @objc func savingBill(sender: UIBarButtonItem)
     {
-        let dictSize = Customer.activeCustomer.billDictionary.count
+        
+      //  let dictSize = Customer.activeCustomer.billDictionary.count
         let idRandomly = Int.random(in: 0..<1000)
-        let passBill = Mobile(billId: idRandomly, billDate: datePicker.date, billType: billTypes.Mobile, totalBillAmount: 12, mobileManufacturerName: "Freedom", planName: "Unlimited Voice", mobileNumber: 98732343234, internetGbUsed : 23, minuteUsed: 34)
-        let convertBill = passBill as Bill
-        Customer.activeCustomer.billDictionary.updateValue(convertBill, forKey: dictSize + 1)
+        let billamount = Double(txtBillAmount.text!)
+        
+        tempcust!.addbill(billId: idRandomly, billDate: datePicker.date, billType: billTypes.Mobile, totalBillAmount: billamount!)
+        for i in (tempcust?.billDictionary.keys)!
+        {
+        print(i)
+        }
+     //   let passBill = Mobile(billId: idRandomly, billDate: datePicker.date, billType: billTypes.Mobile, totalBillAmount: 12, mobileManufacturerName: "Freedom", planName: "Unlimited Voice", mobileNumber: 98732343234, internetGbUsed : 23, minuteUsed: 34)
+       // let convertBill = passBill as Bill
+        //Customer.activeCustomer.billDictionary.updateValue( convertBill, forKey: dictSize + 1)
         self.navigationController?.popViewController(animated: true)
     }
        @IBAction func segmentBillType(_ sender: UISegmentedControl) {
